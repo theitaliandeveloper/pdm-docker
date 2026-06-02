@@ -97,7 +97,7 @@ fi
 
 if [[ -f "$KEY_DIR/api.key" && ! -f "$KEY_DIR/api.pem" ]]; then
     log "Generating API certificate..."
-    sudo openssl req -new -x509 -key "$KEY_DIR/api.key" -out "$KEY_DIR/api.pem" -days 3650 -subj "/CN=Proxmox Datacenter Manager API"
+    openssl req -new -x509 -key "$KEY_DIR/api.key" -out "$KEY_DIR/api.pem" -days 3650 -subj "/CN=Proxmox Datacenter Manager API"
     chmod 640 "$KEY_DIR/api.pem"
     chown root:www-data "$KEY_DIR/api.pem"
     log "API key generated."

@@ -95,7 +95,7 @@ log "Ensuring directory permissions..."
 mkdir -p /var/lib/pdm /var/lib/proxmox-datacenter-manager /var/log/proxmox-datacenter-manager
 chown -R www-data:www-data /var/lib/proxmox-datacenter-manager
 chown -R www-data:www-data /var/lib/pdm
-chown -R www-data:www-data /var/log/proxmox-datacenter-manager
+chown -R root:root /var/log/proxmox-datacenter-manager
 chown -R www-data:www-data /etc/proxmox-datacenter-manager
 chown -R root:root /etc/proxmox-datacenter-manager/auth
 chmod 1770 /etc/proxmox-datacenter-manager

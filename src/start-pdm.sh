@@ -30,8 +30,8 @@ cat <<'EOF'
 ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝
 EOF
 
-log() { echo "[pdm] $*"; }
-warn() { echo "[pdm] WARNING: $*"; }
+log() { echo "[pdm ($(date '+%Y-%m-%d %H:%M:%S'))] $*"; }
+warn() { echo "[pdm ($(date '+%Y-%m-%d %H:%M:%S'))] WARNING: $*"; }
 
 PRIV_API_PID=""
 API_PID=""

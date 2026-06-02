@@ -52,7 +52,7 @@ RUN mkdir -p \
     chmod 1770 \
         /etc/proxmox-datacenter-manager && \
     chown root:root \
-        /var/log/proxmox-datacenter-manager \
+        /var/log/proxmox-datacenter-manager
 
 # Copy and set entrypoint
 COPY start-pdm.sh /usr/local/bin/start-pdm.sh

@@ -90,8 +90,8 @@ fi
 if [[ ! -f "$KEY_DIR/api.key" ]]; then
     log "Generating API key..."
     openssl rand -base64 32 > "$KEY_DIR/api.key"
-    chmod 600 "$KEY_DIR/api.key"
-    chown root:root "$KEY_DIR/api.key"
+    chmod 640 "$KEY_DIR/api.key"
+    chown root:www-data "$KEY_DIR/api.key"
     log "API key generated."
 fi
 

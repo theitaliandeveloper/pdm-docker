@@ -66,7 +66,7 @@ trap cleanup SIGTERM SIGINT
 # Key Generation (idempotent)
 # ============================================================================
 
-KEY_DIR="/etc/proxmox-datacenter-manager"
+KEY_DIR="/etc/proxmox-datacenter-manager/auth"
 mkdir -p "$KEY_DIR"
 
 if [[ ! -f "$KEY_DIR/authkey.key" ]]; then

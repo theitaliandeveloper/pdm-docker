@@ -1,6 +1,6 @@
 services:
   pdm:
-    image: git.vichingo455.qzz.io/Vichingo455/pdm:latest
+    image: git.vichingo455.qzz.io/vichingo455/pdm:latest
     container_name: proxmox-datacenter-manager
     ports:
       - "8443:8443"

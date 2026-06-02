@@ -94,8 +94,9 @@ fi
 log "Ensuring directory permissions..."
 mkdir -p /var/lib/pdm /var/lib/proxmox-datacenter-manager /var/log/proxmox-datacenter-manager /var/log/proxmox-datacenter-manager/api /var/log/proxmox-datacenter-manager/tasks /etc/proxmox-datacenter-manager/access /etc/proxmox-datacenter-manager/acme /etc/proxmox-datacenter-manager/acme/accounts
 chown -R www-data:www-data /var/lib/proxmox-datacenter-manager /var/lib/pdm /etc/proxmox-datacenter-manager
-chown -R root:www-data /etc/proxmox-datacenter-manager/auth /etc/proxmox-datacenter-manager/access /var/log/proxmox-datacenter-manager /etc/proxmox-datacenter-manager/access /etc/proxmox-datacenter-manager/acme
+chown -R root:www-data /etc/proxmox-datacenter-manager/auth /etc/proxmox-datacenter-manager/access /var/log/proxmox-datacenter-manager /etc/proxmox-datacenter-manager/access
 chown -R www-data:www-data /var/log/proxmox-datacenter-manager/api /var/log/proxmox-datacenter-manager/tasks
+chown -R root:root /etc/proxmox-datacenter-manager/acme
 chmod 1770 /etc/proxmox-datacenter-manager
 chmod 750 /etc/proxmox-datacenter-manager/auth /etc/proxmox-datacenter-manager/access
 

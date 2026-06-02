@@ -67,7 +67,7 @@ echo "Checking if sudo needs to be installed..."
 if ! command -v sudo &> /dev/null; then
     echo "Sudo is not installed, installing now..."
     if apt update; then
-        if apt install curl -y; then
+        if apt install sudo -y; then
             echo "Sudo has been installed, proceeding..."
         else
             echo "Error while installing sudo, aborting..."

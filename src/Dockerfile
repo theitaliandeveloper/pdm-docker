@@ -58,6 +58,9 @@ RUN mkdir -p \
 COPY start-pdm.sh /usr/local/bin/start-pdm.sh
 RUN chmod +x /usr/local/bin/start-pdm.sh
 
+# Trying to fix rsyslog
+COPY rsyslog.conf /etc/rsyslog.conf
+
 EXPOSE 8443
 
 VOLUME /var/lib/pdm

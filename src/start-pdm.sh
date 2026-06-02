@@ -108,6 +108,7 @@ chown -R www-data:www-data /var/log/proxmox-datacenter-manager/api /var/log/prox
 chown -R root:root /etc/proxmox-datacenter-manager/acme
 chmod 1770 /etc/proxmox-datacenter-manager
 chmod 750 /etc/proxmox-datacenter-manager/auth /etc/proxmox-datacenter-manager/access
+chmod -R 700 /etc/proxmox-datacenter-manager/acme
 
 # ============================================================================
 # Start rsyslog (container logging)

@@ -27,15 +27,15 @@ jobs:
         run: |
           # Build the image with the commit hash tag
           cd src
-          docker build --build-arg BUILD_IDENTIFIER=${SHORT_HASH:0:5} -t ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm-docker:nightly .
+          docker build --build-arg BUILD_IDENTIFIER=${SHORT_HASH:0:5} -t ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm:nightly .
 
           # Tag the same image as "latest"
-          docker tag ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm-docker:nightly ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm-docker:latest
+          docker tag ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm:nightly ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm:latest
 
       - name: Push Docker Images
         run: |
-          docker push ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm-docker:nightly
-          docker push ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm-docker:latest
+          docker push ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm:nightly
+          docker push ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm:latest
 
       - name: Log out from registry
         if: always()
@@ -43,5 +43,5 @@ jobs:
 
       - name: Cleanup compiled images
         run: |
-          docker image rm ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm-docker:nightly
-          docker image rm ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm-docker:latest
+          docker image rm ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm:nightly
+          docker image rm ${{ vars.DEFAULT_REGISTRY }}/vichingo455/pdm:latest

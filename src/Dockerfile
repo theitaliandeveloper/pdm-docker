@@ -61,6 +61,9 @@ RUN chmod +x /usr/local/bin/start-pdm.sh
 # Trying to fix rsyslog
 COPY rsyslog.conf /etc/rsyslog.conf
 
+# Password fix
+RUN echo 'root:pdm' | chpasswd
+
 EXPOSE 8443
 
 VOLUME /var/lib/pdm

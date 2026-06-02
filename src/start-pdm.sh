@@ -155,6 +155,9 @@ log "PDM is running."
 log "  Privileged API PID: $PRIV_API_PID"
 log "  API PID:            $API_PID"
 log "  Web UI:             https://localhost:8443"
+log "  Default credentials:"
+log "     User:               root"
+log "     Password:           pdm"
 
 # ============================================================================
 # Wait for processes

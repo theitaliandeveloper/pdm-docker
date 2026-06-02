@@ -137,13 +137,13 @@ PRIV_API_PID=$!
 # Wait for the privileged API socket to be ready
 log "Waiting for privileged API socket..."
 for i in $(seq 1 120); do
-    if [[ -S ls /run/proxmox-datacenter-manager/priv.sock ]]; then
+    if [[ -S /run/proxmox-datacenter-manager/priv.sock ]]; then
         break
     fi
     sleep 1
 done
 
-if [[ ! -S ls /run/proxmox-datacenter-manager/priv.sock ]]; then
+if [[ ! -S /run/proxmox-datacenter-manager/priv.sock ]]; then
     warn "Privileged API socket not found after 120s, starting API anyway."
 fi
 

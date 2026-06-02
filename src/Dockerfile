@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Proxmox Datacenter Manager
-RUN echo 'deb http://download.proxmox.com/debian/pdm trixie pdm' \
+RUN echo 'deb http://download.proxmox.com/debian/pdm trixie pdm-no-subscription' \
         > /etc/apt/sources.list.d/pdm.list && \
     wget -qO /etc/apt/trusted.gpg.d/proxmox-release-trixie.gpg \
         https://enterprise.proxmox.com/debian/proxmox-release-trixie.gpg && \

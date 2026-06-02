@@ -27,7 +27,7 @@ jobs:
         run: |
           # Build the image with the commit hash tag
           cd src
-          docker build --build-arg BUILD_IDENTIFIER=${SHORT_HASH:0:5} -t ${{ vars.DEFAULT_REGISTRY }}/Vichingo455/pdm-docker:nightly
+          docker build --build-arg BUILD_IDENTIFIER=${SHORT_HASH:0:5} -t ${{ vars.DEFAULT_REGISTRY }}/Vichingo455/pdm-docker:nightly .
 
           # Tag the same image as "latest"
           docker tag ${{ vars.DEFAULT_REGISTRY }}/Vichingo455/pdm-docker:nightly ${{ vars.DEFAULT_REGISTRY }}/Vichingo455/pdm-docker:latest

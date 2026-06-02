@@ -8,10 +8,7 @@ services:
       - ./data:/var/lib/pdm
       - ./pdm-data:/var/lib/proxmox-datacenter-manager
       - ./config:/etc/proxmox-datacenter-manager
-    devices:
-      - /dev/net/tun:/dev/net/tun
-    sysctls:
-      - net.ipv4.ip_forward=1
+    hostname: pdm
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-fkss", "https://localhost:8443/api2/json/version"]

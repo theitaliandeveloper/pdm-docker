@@ -121,7 +121,7 @@ if [ "$DRY_RUN" = false ]; then
         echo "Docker is already installed, proceeding..."
     fi
     echo "Starting Docker container..."
-    if sudo docker compose up -d &> /dev/null; then
+    if sudo docker compose up -d; then
         echo "Container started successfully! Check the status of the container running: docker logs proxmox-datacenter-manager"
     else
         echo "Error while starting docker container, aborting!"

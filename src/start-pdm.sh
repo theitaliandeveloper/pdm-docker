@@ -92,7 +92,7 @@ fi
 # ============================================================================
 
 log "Ensuring directory permissions..."
-mkdir -p /var/lib/pdm /var/lib/proxmox-datacenter-manager /var/log/proxmox-datacenter-manager
+mkdir -p /var/lib/pdm /var/lib/proxmox-datacenter-manager /var/log/proxmox-datacenter-manager /etc/proxmox-datacenter-manager/access
 chown -R www-data:www-data /var/lib/proxmox-datacenter-manager
 chown -R www-data:www-data /var/lib/pdm
 chown -R root:www-data /var/log/proxmox-datacenter-manager

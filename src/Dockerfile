@@ -38,6 +38,9 @@ RUN echo 'deb http://download.proxmox.com/debian/pdm trixie pdm-no-subscription'
         --no-install-recommends && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# Remove Proxmox Enterprise Sources
+RUN rm -f /etc/apt/sources.list.d/pdm-enterprise.sources
+
 # Create required directories and set permissions
 RUN mkdir -p \
         /var/lib/pdm \

@@ -136,7 +136,7 @@ PRIV_API_PID=$!
 
 # Wait for the privileged API socket to be ready
 log "Waiting for privileged API socket..."
-for i in $(seq 1 30); do
+for i in $(seq 1 120); do
     if [[ -S /run/proxmox-datacenter/privileged-api.sock ]]; then
         break
     fi
@@ -144,7 +144,7 @@ for i in $(seq 1 30); do
 done
 
 if [[ ! -S /run/proxmox-datacenter/privileged-api.sock ]]; then
-    warn "Privileged API socket not found after 30s, starting API anyway."
+    warn "Privileged API socket not found after 120s, starting API anyway."
 fi
 
 log "Starting proxmox-datacenter-api as www-data on port 8443..."

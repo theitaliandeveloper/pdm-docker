@@ -96,6 +96,7 @@ mkdir -p /var/lib/pdm /var/lib/proxmox-datacenter-manager /var/log/proxmox-datac
 chown -R www-data:www-data /var/lib/proxmox-datacenter-manager
 chown -R www-data:www-data /var/lib/pdm
 chown -R www-data:www-data /var/log/proxmox-datacenter-manager
+chown -R www-data:www-data /etc/proxmox-datacenter-manager
 
 # ============================================================================
 # Start rsyslog (container logging)

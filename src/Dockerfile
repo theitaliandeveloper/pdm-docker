@@ -48,7 +48,8 @@ RUN mkdir -p \
     chown www-data:www-data \
         /var/lib/pdm \
         /var/lib/proxmox-datacenter-manager \
-        /var/log/proxmox-datacenter-manager
+        /var/log/proxmox-datacenter-manager \
+        /etc/proxmox-datacenter-manager
 
 # Copy and set entrypoint
 COPY start-pdm.sh /usr/local/bin/start-pdm.sh

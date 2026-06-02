@@ -89,7 +89,7 @@ fi
 
 if [[ ! -f "$KEY_DIR/api.key" ]]; then
     log "Generating API key..."
-    openssl rand -base64 32 > "$KEY_DIR/api.key"
+    openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:4096 -out "$KEY_DIR/api.key" 2>/dev/null
     chmod 640 "$KEY_DIR/api.key"
     chown root:www-data "$KEY_DIR/api.key"
     log "API key generated."

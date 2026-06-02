@@ -97,6 +97,7 @@ chown -R www-data:www-data /var/lib/proxmox-datacenter-manager
 chown -R www-data:www-data /var/lib/pdm
 chown -R www-data:www-data /var/log/proxmox-datacenter-manager
 chown -R www-data:www-data /etc/proxmox-datacenter-manager
+chmod 1770 /etc/proxmox-datacenter-manager
 
 # ============================================================================
 # Start rsyslog (container logging)

@@ -49,6 +49,8 @@ RUN mkdir -p \
         /var/lib/pdm \
         /var/lib/proxmox-datacenter-manager \
         /var/log/proxmox-datacenter-manager \
+        /etc/proxmox-datacenter-manager && \
+    chmod 1770 \
         /etc/proxmox-datacenter-manager
 
 # Copy and set entrypoint

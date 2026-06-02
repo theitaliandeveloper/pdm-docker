@@ -43,6 +43,8 @@ RUN mkdir -p \
         /var/lib/pdm \
         /var/lib/proxmox-datacenter-manager \
         /etc/proxmox-datacenter-manager \
+        /etc/proxmox-datacenter-manager/auth \
+        /etc/proxmox-datacenter-manager/access \
         /var/log/proxmox-datacenter-manager \
         /run/proxmox-datacenter && \
     chown www-data:www-data \

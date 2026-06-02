@@ -110,7 +110,7 @@ RSYSLOG_PID=$(cat /var/run/rsyslogd.pid 2>/dev/null || echo "")
 # ============================================================================
 
 log "Starting proxmox-datacenter-privileged-api..."
-proxmox-datacenter-privileged-api &
+/usr/libexec/proxmox/proxmox-datacenter-privileged-api &
 PRIV_API_PID=$!
 
 # Wait for the privileged API socket to be ready
@@ -127,7 +127,7 @@ if [[ ! -S /run/proxmox-datacenter/privileged-api.sock ]]; then
 fi
 
 log "Starting proxmox-datacenter-api as www-data on port 8443..."
-su -s /bin/bash -c "proxmox-datacenter-api" www-data &
+su -s /bin/bash -c "/usr/libexec/proxmox/proxmox-datacenter-api" www-data &
 API_PID=$!
 
 log "PDM is running."

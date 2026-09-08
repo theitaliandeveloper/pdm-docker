@@ -23,8 +23,8 @@ cat <<'EOF'
 EOF
 
 echo "PDM Docker setup script by Vichingo455."
-URL_STABLE="https://git.vichingo455.qzz.io/Vichingo455/pdm-docker/raw/branch/main/src/docker-compose.yml"
-URL_NIGHTLY="https://git.vichingo455.qzz.io/Vichingo455/pdm-docker/raw/branch/main/src/docker-compose.nightly.yml"
+URL_STABLE="https://git.vichingo455.com/Vichingo455/pdm-docker/raw/branch/main/src/docker-compose.yml"
+URL_NIGHTLY="https://git.vichingo455.com/Vichingo455/pdm-docker/raw/branch/main/src/docker-compose.nightly.yml"
 COMPOSE_URL=$URL_STABLE
 DRY_RUN=false
 OUTPUT_FILE="docker-compose.yml"

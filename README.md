@@ -30,11 +30,11 @@ This projects ports Proxmox Datacenter Manager under Docker
 To run this container there are 2 ways:
 - Automatic script:
 ```bash
-curl -fsSL https://git.vichingo455.qzz.io/Vichingo455/pdm-docker/raw/branch/main/setup.sh | bash
+curl -fsSL https://git.vichingo455.com/Vichingo455/pdm-docker/raw/branch/main/setup.sh | bash
 ```
 - Manually:
 ```bash
-wget https://git.vichingo455.qzz.io/Vichingo455/pdm-docker/raw/branch/main/src/docker-compose.yml
+wget https://git.vichingo455.com/Vichingo455/pdm-docker/raw/branch/main/src/docker-compose.yml
 docker compose up -d
 ```
 

@@ -10,9 +10,3 @@ services:
       - ./config:/etc/proxmox-datacenter-manager
     hostname: pdm
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-fkss", "https://localhost:8443/api2/json/version"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 30s

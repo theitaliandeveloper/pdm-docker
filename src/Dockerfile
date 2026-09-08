@@ -2,7 +2,7 @@ FROM debian:trixie
 
 LABEL org.opencontainers.image.title="Proxmox Datacenter Manager"
 LABEL org.opencontainers.image.description="Proxmox Datacenter Manager under Docker"
-LABEL org.opencontainers.image.source="https://github.com/willmortimer/proxmox-datacenter-manager-docker"
+LABEL org.opencontainers.image.source="https://git.vichingo455.com/Vichingo455/pdm-docker"
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV DEBCONF_NOWARNINGS=yes
